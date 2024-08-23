@@ -10,8 +10,8 @@ function Navbar() {
         if (location.pathname === '/'){
             setActive('home');
         }
-        else if (location.pathname === '/about/'){
-            setActive('about');
+        else if (location.pathname === '/contact/'){
+            setActive('contact');
         }
         else if (location.pathname === '/projects/'){
             setActive('projects');
@@ -26,10 +26,10 @@ function Navbar() {
             </motion.div>
 
             <div className="flex justify-end">
-                <motion.div className="flex-col p-8 text-right font-bold text-xl" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }}>
-                    <motion.p animate={{textDecoration: active==='home' ? 'underline' : 'none'}} whileHover={active !== 'home' ? { color: '#7e7e80' } : {}} style={{ cursor: active === 'home' ? 'default' : 'pointer', pointerEvents: active === 'home' ? 'none' : 'auto' }}><Link to='/'>Home</Link></motion.p>
-                    <motion.p animate={{textDecoration: active==='about' ? 'underline' : 'none'}} whileHover={active !== 'about' ? { color: '#7e7e80' } : {}} style={{ cursor: active === 'home' ? 'default' : 'pointer', pointerEvents: active === 'about' ? 'none' : 'auto' }}><Link to='about/'>About</Link></motion.p>
-                    <motion.p animate={{textDecoration: active==='projects' ? 'underline' : 'none'}} whileHover={active !== 'projects' ? { color: '#7e7e80' } : {}} style={{ cursor: active === 'home' ? 'default' : 'pointer', pointerEvents: active === 'projects' ? 'none' : 'auto' }}><Link to='projects/'>Project</Link></motion.p>
+                <motion.div className="flex-col p-8 text-right font-bold" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }}>
+                    <motion.p><Link to='/' style={{ cursor: active === 'home' ? 'default' : 'pointer', pointerEvents: active === 'home' ? 'none' : 'auto' }}><span className={active === 'home' ? "link-clicked-underline" : "link link-underline"}>Home</span></Link></motion.p>
+                    <motion.p><Link to='projects/' style={{ cursor: active === 'projects' ? 'default' : 'pointer', pointerEvents: active === 'projects' ? 'none' : 'auto' }}><span className={active === 'projects' ? "link-clicked-underline" : "link link-underline"}>Projects</span></Link></motion.p>
+                    <motion.p><Link to='contact/' style={{ cursor: active === 'contact' ? 'default' : 'pointer', pointerEvents: active === 'contact' ? 'none' : 'auto' }}><span className={active === 'contact' ? "link-clicked-underline" : "link link-underline"}>Contact Me</span></Link></motion.p>
                 </motion.div>
             </div>
         </div>

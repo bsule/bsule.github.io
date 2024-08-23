@@ -8,8 +8,6 @@
 }
 
 html {
-    
-
     /* for no scroll bar */
     overflow: auto;
     -ms-overflow-style: none;
@@ -33,15 +31,15 @@ body::-webkit-scrollbar {
 }
 
 .anim_gradient {
-    background: linear-gradient(90deg, #420478 0%, rgb(44, 10, 90) 100%);
+    background: linear-gradient(90deg, #420478 0%, rgb(28, 16, 97) 100%);
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
+    animation: gradient 10s ease infinite;
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    -webkit-animation: gradient 5s ease infinite;
+    -webkit-animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -54,4 +52,30 @@ body::-webkit-scrollbar {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+    -webkit-transition: background-size .5s ease-in-out;
+    -moz-transition: background-size .5s ease-in-out;
+    -ms-transition: background-size .5s ease-in-out;
+    -o-transition: background-size .5s ease-in-out;
+}
+
+.link-clicked-underline {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 100% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.link-underline:hover {
+    background-size: 100% 2px;
+    background-position: 0 100%
 }
