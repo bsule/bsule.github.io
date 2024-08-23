@@ -3,13 +3,13 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 import Navbar from './components/Navbar';
 
 function App() {
-    
-
     return (
-        <Router>
-            <Navbar/>
-            <AnimatedRoutes/>
-        </Router>
+        <div className='container mx-auto'>
+            <Router>
+                <Navbar/>
+                <AnimatedRoutes/>
+            </Router>
+        </div>
     );
 }
 

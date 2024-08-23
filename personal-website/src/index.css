@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+@font-face {
+    font-family: Raleway;
+    src: url("./fonts/Raleway/Raleway-Light.ttf");
+}
 
-    background-image: url("images\Piggment-we vowel.png");
-    background-position: fixed;
+html {
+    
 
     /* for no scroll bar */
     overflow: auto;
@@ -13,9 +16,42 @@ html {
     scrollbar-width: none;
 
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* for no scroll bar in chrome */
 body::-webkit-scrollbar {
     display: none;
+}
+
+::selection {
+    background-color: rgb(176, 170, 170);
+}
+
+::-moz-selection {
+    background-color: rgb(176, 170, 170);
+}
+
+.anim_gradient {
+    background: linear-gradient(90deg, #420478 0%, rgb(44, 10, 90) 100%);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    -webkit-animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
