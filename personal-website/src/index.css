@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+
+    background-image: url("images\Piggment-we vowel.png");
+    background-position: fixed;
+
+    /* for no scroll bar */
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    color: white;
+}
+
+/* for no scroll bar in chrome */
+body::-webkit-scrollbar {
+    display: none;
+}

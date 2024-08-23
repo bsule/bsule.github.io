@@ -1,16 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AnimatedRoutes from './components/AnimatedRoutes';
+import Navbar from './components/Navbar';
 
 function App() {
+    
+
     return (
         <Router>
-            <p><Link to='/'>Home</Link></p>
-            <p><Link to='/about'>About</Link></p>
-
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/about'>About</Route>
-            </Routes>
+            <Navbar/>
+            <AnimatedRoutes/>
         </Router>
     );
 }
