@@ -21,7 +21,7 @@ function Navbar() {
     return (
         <div className="navbar flex justify-between items-center relative">
             <motion.div className="ml-8 font-bold" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 50 }}>
-                <p className="text-4xl">Bilal Suleiman</p>
+                <p className="text-4xl" id="name">Bilal Suleiman</p>
                 <p>Software Engineer</p>
             </motion.div>
 

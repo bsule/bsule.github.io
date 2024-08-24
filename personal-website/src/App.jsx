@@ -1,16 +1,18 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import Navbar from './components/Navbar';
 
 function App() {
     return (
-        <div className='container mx-auto'>
-            <Router>
-                <Navbar/>
-                <AnimatedRoutes/>
-            </Router>
-        </div>
+        <Router>
+            <div className='bg'></div>
+                <div className='container mx-auto'>
+                    <Navbar />
+                        
+                    <AnimatedRoutes />
+                </div>
+        </Router>
     );
 }
 
-export default App
+export default App;
