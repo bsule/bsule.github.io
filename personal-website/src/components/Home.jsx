@@ -15,7 +15,11 @@ function Home() {
                     In my freetime, I enjoy working on projects that blend engineering with software development, exploring interesting and impactful solutions to difficult problems. 
                     When I'm not at my computer, you can find me hiking, playing soccer, or traveling the world.
                 </p>
-                <i class="fa-brands fa-linkedin-in text-blue-500"></i>
+                <div className='flex justify-center mt-20'>
+                    <i class="fa fa-linkedin-in text-blue-500 text-3xl"></i>
+                    <i class="fa fa-github text-3xl ml-4 mr-4"></i>
+                    <i class="fa fa-envelope text-red-500 text-3xl"></i>
+                </div>
             </motion.div>
         </div>
     );
