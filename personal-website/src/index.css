@@ -12,7 +12,7 @@
     src: url("./fonts/Raleway/RobotoMono-Bold.ttf");
 }
 
-#name {
+#name, #project-title {
     font-family: 'Raleway-Extra', sans-serif;
 }
 
