@@ -47,10 +47,6 @@ body::-webkit-scrollbar {
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size .5s ease-in-out;
-    -webkit-transition: background-size .5s ease-in-out;
-    -moz-transition: background-size .5s ease-in-out;
-    -ms-transition: background-size .5s ease-in-out;
-    -o-transition: background-size .5s ease-in-out;
 }
 
 .link-clicked-underline {
@@ -72,7 +68,7 @@ body {
     overflow-x: hidden;
 }
   
-.bg {
+/* .bg {
     position: fixed;
     top: -50%;
     left: -50%;
@@ -100,4 +96,4 @@ body {
     80% { transform: translate(-15%,0) }
     90% { transform: translate(10%,5%) ; -webkit-transform: translate(10%,5%) ; -moz-transform: translate(10%,5%) ; -ms-transform: translate(10%,5%) ; -o-transform: translate(10%,5%) ; }
     100% { transform: translate(5%,0) }
-}
+} */

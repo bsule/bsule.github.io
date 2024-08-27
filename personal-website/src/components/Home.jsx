@@ -25,7 +25,7 @@ function Home() {
                 </p>
                 <div className='flex justify-center mt-20'>
                     <a href="https://www.linkedin.com/in/bsule" target='blank'><motion.i className="fa fa-linkedin-in text-blue-500 text-3xl" whileHover={{opacity: 0.6}}></motion.i></a>
-                    <a href="https://github.com/bsule" target='blank'><motion.i className="fa fa-github text-3xl ml-8 mr-8" whileHover={{opacity: 0.6}}></motion.i></a>
+                    <div className='inline-block pl-16 pr-16'><a href="https://github.com/bsule" target='_blank'><motion.i className="fa fa-github text-3xl" whileHover={{opacity: 0.6}}></motion.i></a></div>
                     <motion.i className="fa fa-envelope-o text-red-500 text-3xl cursor-pointer" whileHover={{opacity: 0.6}} onClick={emailClick}></motion.i>
                 </div>
             </motion.div>
