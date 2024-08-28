@@ -21,7 +21,7 @@ function Home() {
                 <br />
                 <p>
                     In my freetime, I enjoy working on projects that blend engineering with software development, exploring interesting and impactful solutions to difficult problems. 
-                    When I'm not at my computer, you can find me hiking, playing soccer, or traveling the world.
+                    I love to learn new languages and frameworks to push the boundaries of my knowledge and skills.
                 </p>
                 <div className='flex justify-center mt-20'>
                     <a href="https://www.linkedin.com/in/bsule" target='blank'><motion.i className="fa fa-linkedin-in text-blue-500 text-3xl" whileHover={{opacity: 0.6}}></motion.i></a>

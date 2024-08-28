@@ -7,8 +7,8 @@ function Projects(){
     return (
         <div className='absolute flex flex-col items-center justify-center mt-20 left-1/2 transform -translate-x-1/2 w-full pb-20'>
             <motion.div className="text-3xl" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                <div className='border-4 rounded-lg max-w-screen-xl flex justify-center shadow-md shadow-slate-500'>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8 p-5'>
+                <div className='max-w-screen-xl flex justify-center'>
+                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
                             <a href="https://github.com/bsule/ecommerce-app" target='blank'><img src={ecommercePic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
@@ -21,9 +21,9 @@ function Projects(){
                 </div>
             </motion.div>
 
-            <motion.div className="text-3xl" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                <div className='mt-10 border-4 rounded-lg max-w-screen-xl flex justify-center shadow-md shadow-slate-500'>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8 p-5'>
+            <div className="text-3xl pt-10">
+                <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
+                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
                             <a href="https://github.com/bsule/Workout-Tracker" target='blank'><img src={workoutTrackerPic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
@@ -33,12 +33,12 @@ function Projects(){
                             <a href="https://github.com/bsule/Workout-Tracker" target="blank"><motion.button className='bg-blue-600 text-white font-bold text-base py-2 px-4 rounded mt-4' whileHover={{backgroundColor: "#1D4ED8"}}>Learn more</motion.button></a>
                         </div>
                     </motion.div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
 
-            <motion.div className="text-3xl" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                <div className='mt-10 border-4 rounded-lg max-w-screen-xl flex justify-center shadow-md shadow-slate-500'>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8 p-5'>
+            <div className="text-3xl pt-10">
+                <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
+                    <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
                             <a href="https://github.com/bsule/Jwayyed-Law-LLC" target='blank'><img src={JwayyedLawPic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
@@ -48,8 +48,8 @@ function Projects(){
                             <a href="https://github.com/bsule/Jwayyed-Law-LLC" target="blank"><motion.button className='bg-blue-600 text-white font-bold text-base py-2 px-4 rounded mt-4' whileHover={{backgroundColor: "#1D4ED8"}}>Learn more</motion.button></a>
                         </div>
                     </motion.div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </div>
     );
 }

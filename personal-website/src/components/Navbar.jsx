@@ -10,8 +10,8 @@ function Navbar() {
         if (location.pathname === '/'){
             setActive('home');
         }
-        else if (location.pathname === '/contact/'){
-            setActive('contact');
+        else if (location.pathname === '/about/'){
+            setActive('about');
         }
         else if (location.pathname === '/projects/'){
             setActive('projects');
@@ -28,8 +28,8 @@ function Navbar() {
             <div className="flex justify-end">
                 <motion.div className="flex-col p-8 text-right font-bold" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }}>
                     <motion.p><Link to='/' style={{ cursor: active === 'home' ? 'default' : 'pointer', pointerEvents: active === 'home' ? 'none' : 'auto' }}><span className={active === 'home' ? "link-clicked-underline" : "link link-underline"}>Home</span></Link></motion.p>
+                    <motion.p><Link to='about/' style={{ cursor: active === 'about' ? 'default' : 'pointer', pointerEvents: active === 'about' ? 'none' : 'auto' }}><span className={active === 'about' ? "link-clicked-underline" : "link link-underline"}>About</span></Link></motion.p>
                     <motion.p><Link to='projects/' style={{ cursor: active === 'projects' ? 'default' : 'pointer', pointerEvents: active === 'projects' ? 'none' : 'auto' }}><span className={active === 'projects' ? "link-clicked-underline" : "link link-underline"}>Projects</span></Link></motion.p>
-                    <motion.p><Link to='contact/' style={{ cursor: active === 'contact' ? 'default' : 'pointer', pointerEvents: active === 'contact' ? 'none' : 'auto' }}><span className={active === 'contact' ? "link-clicked-underline" : "link link-underline"}>Contact Me</span></Link></motion.p>
                 </motion.div>
             </div>
         </div>

@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Raleway;
+    font-family: RobotoMono;
     src: url("./fonts/Raleway/RobotoMono-Light.ttf");
 }
 
 @font-face {
-    font-family: Raleway-Extra;
+    font-family: RobotoMonoBold;
     src: url("./fonts/Raleway/RobotoMono-Bold.ttf");
 }
 
 #name, #project-title {
-    font-family: 'Raleway-Extra', sans-serif;
+    font-family: 'RobotoMonoBold', sans-serif;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
     scrollbar-width: none;
 
     color: white;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'RobotoMono', sans-serif;
 }
 
 /* for no scroll bar in chrome */
