@@ -26,6 +26,12 @@ html {
     font-family: 'RobotoMono', sans-serif;
 }
 
+body {
+    background-color: #111111;
+    margin: 0;
+    overflow-x: hidden;
+}
+
 /* for no scroll bar in chrome */
 body::-webkit-scrollbar {
     display: none;
@@ -62,11 +68,9 @@ body::-webkit-scrollbar {
     background-position: 0 100%
 }
 
-body {
-    background-color: #111111;
-    margin: 0;
-    overflow-x: hidden;
-}
+/* #about-pic{
+    z-index: ;
+} */
   
 /* .bg {
     position: fixed;
