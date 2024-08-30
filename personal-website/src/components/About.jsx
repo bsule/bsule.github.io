@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 function About() {
     return (
-        <div className='flex justify-left'>
-            <motion.div className="absolute xl:w-3/5 w-1/2 text-lg pl-10" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}}>
+        <div className='flex lg:justify-left' id='about-text'>
+            <motion.div className="absolute xl:w-3/5 min-[1026px]:w-1/2 w-3/4 min-[730px]:text-lg lg:pl-10" id='about-inner' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}}>
                 <p className='mt-20'>
                     In recent years, I've been working on my skills trying to learn different technologies that can transform my ideas into well-designed products. Some of these technologies include React, Django REST Framework, AWS, and much more.
                     I enjoy working on full-stack projects that allow me to have full customization over the whole product, whether it's the frontend or backend.

@@ -67,10 +67,6 @@ body::-webkit-scrollbar {
     background-size: 100% 2px;
     background-position: 0 100%
 }
-
-/* #about-pic{
-    z-index: ;
-} */
   
 /* .bg {
     position: fixed;
@@ -101,3 +97,71 @@ body::-webkit-scrollbar {
     90% { transform: translate(10%,5%) ; -webkit-transform: translate(10%,5%) ; -moz-transform: translate(10%,5%) ; -ms-transform: translate(10%,5%) ; -o-transform: translate(10%,5%) ; }
     100% { transform: translate(5%,0) }
 } */
+
+
+@media screen and (max-width: 1025px) {
+    #about-pic-div {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 400px;
+}
+
+    #about-pic {
+        border-radius: 15px;
+    }
+
+    #about-text {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #about-inner {
+        padding-top: 500px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #about-pic-div {
+        width: 85%;
+        padding-top: 20px;
+    }
+
+    #about-text {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #about-inner {
+        width: 90%;
+        padding-top: 550px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #about-inner {
+        width: 90%;
+        padding-top: 500px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #about-inner {
+        width: 90%;
+        padding-top: 450px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #about-inner {
+        width: 90%;
+        padding-top: 410px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #about-inner {
+        width: 90%;
+        padding-top: 380px;
+    }
+}
