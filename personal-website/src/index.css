@@ -126,6 +126,13 @@ body::-webkit-scrollbar {
         width: 90%;
         padding-top: 450px;
     }
+
+    .project-pic {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 410px) {

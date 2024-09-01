@@ -10,7 +10,7 @@ function Projects(){
                 <div className='max-w-screen-xl flex justify-center'>
                     <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/bsule/ecommerce-app" target='blank'><img src={ecommercePic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
+                            <a href="https://github.com/bsule/ecommerce-app" target='blank'><img src={ecommercePic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
                         <div className='text-center md:text-left items-center mt-4'>
                             <h3 className='font-bold text-2xl' id='project-title'>Ecommerce Shop</h3>
@@ -25,7 +25,7 @@ function Projects(){
                 <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
                     <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/bsule/Workout-Tracker" target='blank'><img src={workoutTrackerPic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
+                            <a href="https://github.com/bsule/Workout-Tracker" target='blank'><img src={workoutTrackerPic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
                         <div className='text-center md:text-left items-center mt-4'>
                             <h3 className='font-bold text-2xl' id='project-title'>Workout Tracker</h3>
@@ -40,7 +40,7 @@ function Projects(){
                 <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
                     <motion.div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
                         <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/bsule/Jwayyed-Law-LLC" target='blank'><img src={JwayyedLawPic} alt="" className='rounded-xl' width="400px" height="300px"/></a>
+                            <a href="https://github.com/bsule/Jwayyed-Law-LLC" target='blank'><img src={JwayyedLawPic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
                         </motion.div>
                         <div className='text-center md:text-left items-center mt-4'>
                             <h3 className='font-bold text-2xl' id='project-title'>Jwayyed Law LLC</h3>
