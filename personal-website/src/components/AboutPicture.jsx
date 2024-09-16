@@ -12,6 +12,16 @@ function AboutPicture() {
     const [arrLocation, setArrLocation] = useState(0);
 
     useEffect(() => {
+        const preloadImages = () => {
+          picArr.forEach((image) => {
+            const img = new Image();
+            img.src = image;
+          });
+        };
+        preloadImages();
+      }, []);
+
+    useEffect(() => {
         setArrLocation(Math.floor(Math.random() * 3));
     }, [location.pathname]);
 
