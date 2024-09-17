@@ -1,9 +1,22 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ecommercePic from '../assets/images/ecommerce-pic.png';
 import workoutTrackerPic from '../assets/images/workout-tracker-pic.png';
 import JwayyedLawPic from '../assets/images/jwayyed-law-pic.png';
 
 function Projects(){
+    const picArr = [ecommercePic, workoutTrackerPic, JwayyedLawPic];
+
+    useEffect(() => {
+        const preloadImages = () => {
+            picArr.forEach((image) => {
+                const img = new Image();
+                img.src = image;
+            });
+        };
+        preloadImages();
+    }, []);
+
     return (
         <div className='absolute flex flex-col items-center justify-center mt-20 left-1/2 transform -translate-x-1/2 w-full pb-20'>
             <motion.div className="text-3xl" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
