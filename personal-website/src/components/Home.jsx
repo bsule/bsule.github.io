@@ -16,7 +16,7 @@ function Home() {
             <motion.div className="sm:text-lg fixed max-w-7xl ml-4 mr-4 p-8" id='home-text' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}}>
                 <p className='mt-12'>
                     Hello! I'm a software engineer and former intern at <a href="https://msasosoftware.com/" target='blank'><span className='link link-underline font-semibold'>MSASO Software and Consulting LLC</span></a>.
-                    I am a current senior at the University of California, Riverside and am going for my bachelors in Computer Science.
+                    I am a graduate of the University of California, Riverside with a Bachelors of Science in Computer Science.
                 </p>
                 <br />
                 <p>
