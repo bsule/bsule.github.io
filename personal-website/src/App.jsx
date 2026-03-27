@@ -1,18 +1,22 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import { GlowCapture } from '@codaworks/react-glow';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import Navbar from './components/Navbar';
-import AboutPicture from './components/AboutPicture';
 
 function App() {
     return (
         <Router>
-            <div className='bg'></div>
-                <div className='container mx-auto'>
+            {/* GlowCapture tracks cursor position across the whole page.
+                Glow is intentionally NOT applied to the background — only to
+                individual glass cards in Home, About, and Projects. */}
+            <GlowCapture>
+                <div className="sticky top-0 z-50 navbar-glass">
                     <Navbar />
-                    <AboutPicture/>
-                        
+                </div>
+                <div className="container mx-auto">
                     <AnimatedRoutes />
                 </div>
+            </GlowCapture>
         </Router>
     );
 }

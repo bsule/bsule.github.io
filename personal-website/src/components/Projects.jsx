@@ -1,68 +1,112 @@
 import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
+import { Glow } from '@codaworks/react-glow';
 import ecommercePic from '../assets/images/ecommerce-pic.png';
 import workoutTrackerPic from '../assets/images/workout-tracker-pic.png';
-import JwayyedLawPic from '../assets/images/jwayyed-law-pic.png';
+import JwayyedLawPic from '../assets/images/jjlawohio.png';
+import paralegixPic from '../assets/images/paralegix_screenshot.png';
 
-function Projects(){
-    const picArr = [ecommercePic, workoutTrackerPic, JwayyedLawPic];
+const projects = [
+    {
+        image: paralegixPic,
+        title: 'Paralegix',
+        description: 'Full-stack legal practice management platform for law firms. Features document generation, e-signatures, client portals, and billing.',
+        link: 'https://github.com/bsule/Paralegix',
+        siteLink: 'https://paralegix.com',
+        tags: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Stripe'],
+    },
+    {
+        image: JwayyedLawPic,
+        title: 'Jwayyed Law LLC',
+        description: 'Official website for the law firm based in Columbus, Ohio. Led a team of 3 in the design of the website resulting in a 50% increase in sales.',
+        link: 'https://github.com/EsmailNadir/JwayyedLawLLC-MP',
+        siteLink: 'https://jjlawohio.com',
+        tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Team Lead'],
+    },
+    {
+        image: ecommercePic,
+        title: 'Ecommerce Shop',
+        description: 'Full-stack Django Rest and React ecommerce website. Utilized REST APIs for the backend with JWT Token Authentication for secure data protection.',
+        link: 'https://github.com/bsule/ecommerce-app',
+        tags: ['React', 'Django', 'REST API', 'JWT'],
+    },
+    {
+        image: workoutTrackerPic,
+        title: 'Workout Tracker',
+        description: 'Full-stack workout tracker website using Django. Users can create an account, create a routine name, and log their weight and reps completed.',
+        link: 'https://github.com/bsule/Workout-Tracker',
+        tags: ['Django', 'Python', 'HTML', 'CSS'],
+    },
+];
 
+function Projects() {
     useEffect(() => {
-        const preloadImages = () => {
-            picArr.forEach((image) => {
-                const img = new Image();
-                img.src = image;
-            });
-        };
-        preloadImages();
+        projects.filter(p => p.image).forEach(({ image }) => {
+            const img = new Image();
+            img.src = image;
+        });
     }, []);
 
     return (
-        <div className='absolute flex flex-col items-center justify-center mt-20 left-1/2 transform -translate-x-1/2 w-full pb-20'>
-            <motion.div className="text-3xl" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                <div className='max-w-screen-xl flex justify-center'>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start sm:gap-8 gap-4'>
-                        <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/bsule/ecommerce-app" target='_blank'><img src={ecommercePic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
-                        </motion.div>
-                        <div className='text-center md:text-left items-center mt-4'>
-                            <h3 className='font-bold sm:text-2xl text-xl' id='project-title'>Ecommerce Shop</h3>
-                            <p className='text-base mt-2'>Full-stack Django Rest and React ecommerce website. Utilized REST APIs for the backend with JWT Token Authentication for secure data protection.</p>
-                            <a href="https://github.com/bsule/ecommerce-app" target="_blank"><motion.button className='bg-blue-600 text-white font-bold sm:text-base text-sm py-2 px-4 rounded mt-4' whileHover={{backgroundColor: "#1D4ED8"}}>Learn more</motion.button></a>
-                        </div>
-                    </motion.div>
-                </div>
-            </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-16 px-4 pb-20 max-w-4xl mx-auto w-full">
+            {projects.map(({ image, title, description, link, siteLink, tags, placeholder }, i) => (
+                <Glow key={title} color="rgb(99, 102, 241)">
+                    <motion.div
+                        className="project-card overflow-hidden flex flex-col h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                    >
+                        {/* Image — no glow: class here so the effect never applies */}
+                        {placeholder ? (
+                            <div className="w-full h-48 bg-white/5 flex items-center justify-center">
+                                <span className="text-white/20 text-4xl">?</span>
+                            </div>
+                        ) : (
+                            <a href={link} target="_blank">
+                                <img src={image} alt={title} className="w-full h-64 object-cover object-top" />
+                            </a>
+                        )}
 
-            <div className="text-3xl pt-10">
-                <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start sm:gap-8 gap-4'>
-                        <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/bsule/Workout-Tracker" target='_blank'><img src={workoutTrackerPic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
-                        </motion.div>
-                        <div className='text-center md:text-left items-center mt-4'>
-                            <h3 className='font-bold sm:text-2xl text-xl' id='project-title'>Workout Tracker</h3>
-                            <p className='text-base mt-2'>Full-stack workout tracker website using Django. Users can create an account, create a routine name, and log their weight and reps completed</p>
-                            <a href="https://github.com/bsule/Workout-Tracker" target="_blank"><motion.button className='bg-blue-600 text-white font-bold sm:text-base text-sm py-2 px-4 rounded mt-4' whileHover={{backgroundColor: "#1D4ED8"}}>Learn more</motion.button></a>
-                        </div>
-                    </motion.div>
-                </motion.div>
-            </div>
+                        {/* glow:bg-glow/10 only here — content area only */}
+                        <div className="p-5 flex flex-col flex-1 gap-2 glow:bg-glow/10">
+                            <div className="flex items-center justify-between">
+                                <h3 className="font-bold text-lg" id="project-title">{title}</h3>
+                                {placeholder && (
+                                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/50">
+                                        Soon
+                                    </span>
+                                )}
+                            </div>
 
-            <div className="text-3xl pt-10">
-                <motion.div className='max-w-screen-xl flex justify-center' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: {duration: .5}}} whileHover={{x: 6, y: -6}}>
-                    <motion.div className='flex flex-col md:flex-row items-center md:items-start sm:gap-8 gap-4'>
-                        <motion.div className='relative' whileHover={{ opacity: 0.7 }} transition={{ duration: 0.3 }}>
-                            <a href="https://github.com/EsmailNadir/JwayyedLawLLC-MP" target='_blank'><img src={JwayyedLawPic} alt="" className='project-pic rounded-xl' width="400px" height="300px"/></a>
-                        </motion.div>
-                        <div className='text-center md:text-left items-center mt-4'>
-                            <h3 className='font-bold sm:text-2xl text-xl' id='project-title'>Jwayyed Law LLC</h3>
-                            <p className='text-base mt-2'>Official website for the law firm based in Columbus, Ohio. Led a team of 3 in the design of the website resulting in a 50% increase in sales.</p>
-                            <a href="https://github.com/EsmailNadir/JwayyedLawLLC-MP" target="_blank"><motion.button className='bg-blue-600 text-white font-bold sm:text-base text-sm py-2 px-4 rounded mt-4' whileHover={{backgroundColor: "#1D4ED8"}}>Learn more</motion.button></a>
+                            <p className="text-sm text-white/60 flex-1">{description}</p>
+
+                            {tags.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5 mt-1">
+                                    {tags.map(tag => (
+                                        <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-300/80 border border-blue-500/20">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+
+                            {link && (
+                                <a href={siteLink ?? link} target="_blank" className="mt-3">
+                                    <motion.button
+                                        className="w-full py-2 px-4 rounded-lg text-sm font-semibold text-white/80 border border-white/10 bg-white/5"
+                                        whileHover={{ backgroundColor: 'rgba(99,102,241,0.2)', borderColor: 'rgba(99,102,241,0.4)', color: 'rgba(255,255,255,1)' }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        {siteLink ? 'Visit Site →' : 'View on GitHub →'}
+                                    </motion.button>
+                                </a>
+                            )}
                         </div>
                     </motion.div>
-                </motion.div>
-            </div>
+                </Glow>
+            ))}
         </div>
     );
 }

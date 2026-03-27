@@ -26,6 +26,8 @@ body {
     background-color: #111111;
     margin: 0;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* for no scroll bar in chrome */
@@ -47,15 +49,15 @@ body::-webkit-scrollbar {
 
 .link-underline {
     border-bottom-width: 0;
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-image: linear-gradient(transparent, transparent), linear-gradient(135deg, #60a5fa, #a78bfa);
     background-size: 0 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size .5s ease-in-out;
+    transition: background-size .2s ease-in-out, filter .3s ease;
 }
 
 .link-clicked-underline {
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-image: linear-gradient(transparent, transparent), linear-gradient(135deg, #60a5fa, #a78bfa);
     background-size: 100% 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -64,69 +66,87 @@ body::-webkit-scrollbar {
 
 .link-underline:hover {
     background-size: 100% 2px;
-    background-position: 0 100%
+    background-position: 0 100%;
+    filter: brightness(1.5) drop-shadow(0 0 6px rgba(96, 165, 250, 0.5));
 }
 
 
 
-@media screen and (max-width: 1025px) {
-    #about-pic-div {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 400px;
+
+/* ===== GLASSMORPHISM BASE ===== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
 }
 
-    #about-pic {
-        border-radius: 15px;
-    }
-
-    #about-text {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    #about-inner {
-        padding-top: 500px;
-    }
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-@media screen and (max-width: 520px) {
-    #home-text {
-        text-align: center;
-        padding: 4px;
-        padding-top: 0;
-        margin-top: 20px;
-    }
-
-    #about-pic-div {
-        width: 85%;
-        padding-top: 20px;
-    }
-
-    #about-text {
-        justify-content: center;
-        text-align: center;
-    }
-
-    #about-inner {
-        width: 90%;
-        padding-top: 550px;
-    }
+/* ===== SOCIAL ICON GLASS PILL ===== */
+.social-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
 }
 
-@media screen and (max-width: 490px) {
-    #about-inner {
-        width: 90%;
-        padding-top: 500px;
-    }
+.social-pill:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(96, 165, 250, 0.4);
+    transform: translateY(-2px);
 }
+
+/* ===== TYPEWRITER CURSOR ===== */
+.cursor-blink {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background: #60a5fa;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== STICKY GLASS NAVBAR ===== */
+.navbar-glass {
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ===== PROJECT CARD WITH GRADIENT BORDER ON HOVER ===== */
+.project-card {
+    position: relative;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+
 
 @media screen and (max-width: 440px) {
-    #about-inner {
-        width: 90%;
-        padding-top: 450px;
-    }
-
     .project-pic {
         width: 90%;
         display: flex;
@@ -135,47 +155,4 @@ body::-webkit-scrollbar {
     }
 }
 
-@media screen and (max-width: 410px) {
-    #about-inner {
-        width: 90%;
-        padding-top: 410px;
-    }
-}
 
-@media screen and (max-width: 380px) {
-    #about-inner {
-        width: 90%;
-        padding-top: 380px;
-    }
-}
-
-
-/* .bg {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('/src/assets/images/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: .9;
-    visibility: visible;
-    z-index: -1;
-}
-
-@keyframes bg-animation {
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) ; -webkit-transform: translate(-5%,-5%) ; -moz-transform: translate(-5%,-5%) ; -ms-transform: translate(-5%,-5%) ; -o-transform: translate(-5%,-5%) ; }
-    20% { transform: translate(-10%,5%) }
-    30% { transform: translate(5%,-10%) }
-    40% { transform: translate(-5%,15%) }
-    50% { transform: translate(-10%,5%) }
-    60% { transform: translate(15%,0) }
-    70% { transform: translate(0,10%) }
-    80% { transform: translate(-15%,0) }
-    90% { transform: translate(10%,5%) ; -webkit-transform: translate(10%,5%) ; -moz-transform: translate(10%,5%) ; -ms-transform: translate(10%,5%) ; -o-transform: translate(10%,5%) ; }
-    100% { transform: translate(5%,0) }
-} */

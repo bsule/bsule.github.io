@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Home'
 import About from './About';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import Projects from './Projects';
 
 function AnimatedRoutes(){
